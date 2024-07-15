@@ -4,11 +4,10 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
 
-
-class RoleMiddleware
+class MasyarakatMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,12 +16,9 @@ class RoleMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-       
-
-    if(!Auth::check()){
-        return redirect('login')->with('error','Maaf anda tidak memiliki akses');
-    }else{
-        return $next($request);
-    }
+        if (Auth::check() && Auth::user()->role == 2) {
+            return $next($request);
+        }
+        return redirect('dashboard')->with('error', 'You do not have access to this page');
     }
 }

@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('layanan', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_user')->constrained('users')->onDelete('cascade');
+            $table->string('title');
+            $table->string('description');
+            $table->string('status');
+            $table->string('tanggapan');
             $table->timestamps();
         });
     }

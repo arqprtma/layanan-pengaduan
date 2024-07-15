@@ -12,5 +12,11 @@
         "postcss": "^8.4.39",
         "tailwindcss": "^3.4.4",
         "vite": "^5.0"
+    },
+    "dependencies": {
+        "datatables.net-bs4": "^2.0.8",
+        "datatables.net-buttons-bs4": "^3.0.2",
+        "jszip": "^3.10.1",
+        "pdfmake": "^0.2.10"
     }
 }

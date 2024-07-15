@@ -16,10 +16,10 @@
             <nav>
                 <ul class="space-y-2">
                     <li>
-                        <a href="{{ route('admin.dashboard') }}" class="block p-4 hover:bg-gray-700">Dashboard</a>
+                        <a href="{{ route('petugas.dashboard') }}" class="block p-4 hover:bg-gray-700">Dashboard</a>
                     </li>
                     <li>
-                        <a href="{{ route('admin.pengaduan') }}" class="block p-4 hover:bg-gray-700">Pengaduan</a>
+                        <a href="{{ route('petugas.pengaduan') }}" class="block p-4 hover:bg-gray-700">Pengaduan</a>
                     </li>
                     <!-- Tambahkan menu lain sesuai kebutuhan -->
                 </ul>
@@ -31,7 +31,7 @@
             <div class="navbar bg-slate-600 w-full h-[80px]" style="background-color: gray">
                 <div class="flex justify-between items-center py-4 px-6">
                     <div class="judul text-white text-lg lg:pt-3 pt-2">Selamat Datang, {{$user->name}}</div>
-
+                    
                     <!-- Hamburger button for mobile -->
                     <div class="lg:hidden">
                         <button id="menu-button" class="text-white focus:outline-none">
@@ -47,9 +47,9 @@
                 </div>
                 <!-- Mobile menu -->
                 <div id="mobile-menu" class="lg:hidden hidden px-6 py-4 bg-slate-600 text-white">
-                    <a href="{{ route('admin.dashboard') }}" class="block p-3 hover:bg-gray-700">Dashboard</a>
-                    <a href="{{ route('admin.pengaduan') }}" class="block p-3 hover:bg-gray-700">Pengaduan</a>
-                    <a href="{{route('logout')}}" class="block p-3 hover:bg-red-700">Logout</a>
+                    <a href="{{ route('petugas.dashboard') }}" class="block p-3 hover:bg-gray-700">Dashboard</a>
+                    <a href="{{ route('petugas.pengaduan') }}" class="block p-3 hover:bg-gray-700">Pengaduan</a>
+                    <a href="{{route('logout')}}" class="block py-2 p-3 hover:bg-red-700">Logout</a>
                 </div>
             </div>
 
@@ -59,8 +59,8 @@
                     <img src="/images/hero.png" width="300px" alt="">
                 </div>
                 <div class="description max-w-lg lg:text-left">
-                    <h1 class="text-3xl font-bold mb-4">Dashboard Admin</h1>
-                    <p class="text-gray-700">Selamat datang di Dashboard Admin. Di sini, Anda memiliki kontrol penuh terhadap sistem pengaduan. Kelola dan pantau semua pengaduan dari masyarakat dengan efisien, pastikan setiap masalah diselesaikan dengan cepat dan transparan.</p>
+                    <h1 class="text-3xl font-bold mb-4">Dashboard Petugas</h1>
+                    <p class="text-gray-700">Selamat datang di Dashboard Petugas. Di sini, Anda dapat mengelola pengaduan dari masyarakat dengan lebih efisien dan responsif. Tetap terhubung dengan kebutuhan layanan pengguna dan pastikan setiap masalah mendapat perhatian yang tepat waktu.</p>
                 </div>
             </div>
         </main>

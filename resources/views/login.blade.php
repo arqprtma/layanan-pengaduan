@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/app.css') --}}
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
 <body class="bg-gray-200 flex items-center justify-center h-screen">
@@ -28,8 +29,11 @@
                     Sign In
                 </button>  
             </div> 
-            <div class="register mt-5 text-[14px] text-center">
+            <div class="register mt-5 text-[14px] text-center lg:text-lg text-sm">
             <a class="">kamu belum punya akun ? </a><span><a href="{{route('register')}}" class="text-black hover:text-[blue] underline">Daftar disini </a></span>
+            </div>
+            <div class="text-center text-center mt-3 lg:text-lg text-sm">
+            <a href="{{ route('home') }}" class="underline">Kembali ke Halaman Utama</a>
             </div>
         </form>
     </div>

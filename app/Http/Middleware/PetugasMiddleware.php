@@ -5,10 +5,9 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
 use Symfony\Component\HttpFoundation\Response;
 
-class GuestMiddleware
+class PetugasMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,12 +16,9 @@ class GuestMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        
-        if (Auth::check()) {
-            return redirect('dashboard');
+        if (Auth::check() && Auth::user()->role == 3) {
+            return $next($request);
         }
-        return $next($request);
-    
-        
+        return redirect('/login')->with('error', 'You do not have access to this page');
     }
 }
